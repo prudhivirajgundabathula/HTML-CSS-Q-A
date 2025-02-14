@@ -2805,19 +2805,97 @@ Grid Template Columns: Defines three columns with different widths (1fr 2fr 1fr)
 Grid Column: The .header element spans all three columns (grid-column: 1 / 4), the .sidebar spans the first column, the .content spans the second and third columns, and the .footer spans all three columns.
 CSS Grid is a versatile and powerful layout system that allows for complex and responsive web designs with minimal code. It provides more control over layout compared to older techniques like floats and inline-block.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-4️⃣ Pseudo-Classes : Pseudo-classes target elements based on their state or interaction.
+4️⃣ Pseudo-classes in CSS are keywords added to selectors that specify a special state of the selected elements. They are useful for applying styles to elements based on their dynamic state or user interaction.
+Commonly Used Pseudo-Classes
+:hover - Styles an element when the user hovers over it with a pointer device.
 css
 a:hover {
     color: red;
 }
+:active - Styles an element when it is being activated by the user (e.g., clicked).
+css
+a:active {
+    color: green;
+}
+:focus - Styles an element when it has received focus (e.g., when a user clicks on an input field).
+css
 input:focus {
     border-color: blue;
 }
-How It Works:
-:hover - Targets the element when the user hovers over it.
-In this example, the link color changes to red on hover.
-:focus - Targets the element when it gains focus (e.g., clicking or tabbing into an input field).
-Here, the input field's border turns blue.
+:visited - Styles a link after it has been visited.
+css
+a:visited {
+    color: purple;
+}
+:nth-child(n) - Styles elements based on their position in a parent element.
+css
+li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+:first-child - Styles the first child element of a parent.
+css
+p:first-child {
+    font-weight: bold;
+}
+:last-child - Styles the last child element of a parent.
+css
+p:last-child {
+    font-style: italic;
+}
+:not(selector) - Styles elements that do not match the given selector.
+css
+input:not([type="submit"]) {
+    border: 1px solid #ccc;
+}
+Example
+Let's see an example that uses several pseudo-classes to style a simple list and form elements.
+HTML
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pseudo-Classes Example</title>
+    <style>
+        /* Style list items with pseudo-classes */
+        li:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+        li:hover {
+            background-color: yellow;
+        }
+        /* Style form elements with pseudo-classes */
+        input:focus {
+            border-color: blue;
+        }
+        input:active {
+            background-color: #e0e0e0;
+        }
+        a:visited {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+Explanation
+List Items: Odd list items are given a different background color using the :nth-child(odd) pseudo-class. When you hover over any list item, it changes color.
+Form Elements: The :focus pseudo-class changes the border color of input fields when they are focused. The :active pseudo-class changes the background color of the input fields when they are clicked.
+Pseudo-classes are very powerful in CSS and allow for dynamic and interactive styling of elements.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 5️⃣ Font Face
 The @font-face rule in CSS allows you to define custom fonts that can be used on your web pages. This means you can use fonts that are not pre-installed on the user's device, and you can ensure a consistent look and feel across different platforms and browsers.
