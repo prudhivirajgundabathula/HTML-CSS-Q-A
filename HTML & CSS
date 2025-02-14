@@ -194,7 +194,7 @@ Note : Not all the HTML inline elements should contain only other inline element
 We can write multiple HTML div elements in another HTML div element.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 11. What is the difference between HTML and JavaScript?
-JavaScript	HTML : JavaScript is a programming language that makes web pages more interactive and dynamic	HTML is a markup language that is used to describe the structure and layout of web pages
+JavaScript is a programming language that makes web pages more interactive and dynamic, HTML is a markup language that is used to describe the structure and layout of web pages
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 12. What is a viewport?
 Viewport: The browser's viewport is the area of the window in which web content can be seen.
