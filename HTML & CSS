@@ -116,7 +116,7 @@ Ordered list: It is used to group a set of related items in a specific order.
 Description list: It is used to display name/value pairs such as terms and definitions.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 22. Explain the HTML hr (horizontal line) element?
-HTML Horizontal Rule Element: The HTML hr element inserts a horizontal line and helps to separate the content.
+The <hr> tag in HTML is used to create a horizontal rule (a line) to separate content. It is a self-closing tag (does not require a closing </hr>), and it is often used to create a visual division between sections of content on a webpage.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 23. Explain about the HTML block-level elements and inline elements?
 Block-level Elements:The HTML Block-level elements always start in a new line and take up the full width available. 
