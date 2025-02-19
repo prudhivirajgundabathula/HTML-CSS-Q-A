@@ -73,6 +73,121 @@ Contains Content?	          No	             Yes
 Components	Opening tag, closing tag	     Opening tag, content, closing tag
 Examples	   <h1>, </h1>, <br>	             <h1>Hello World</h1>
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML HIERARCHY
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Specifies UTF-8 encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Mobile responsive -->
+    <title>Page Title</title>
+</head>
+<body>
+    <header>
+        <h1>Website Header</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Section Title</h2>
+            <p>Paragraph inside section.</p>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 All Rights Reserved</p>
+    </footer>
+</body>
+</html>
+
+1️⃣ <!DOCTYPE html>
+html
+<!DOCTYPE html>
+Purpose: Declares the document as HTML5.
+Why Important: Helps browsers interpret the document correctly. Without it, older browsers may switch to quirks mode, leading to inconsistent behavior.
+
+**2️⃣ <html lang="en">
+html
+<html lang="en">
+Tag: The <html> tag is the root element of the HTML document.
+Attribute: lang="en" specifies that the document's language is English.
+Why Important: Helps screen readers and search engines understand the document's language.
+
+3️⃣ <head> Section
+The <head> contains metadata that defines how the document behaves and appears.
+Meta Tags
+html
+<meta charset="UTF-8">
+Specifies Character Encoding: Ensures that the document uses the UTF-8 character set, which supports most characters, including special symbols and emojis.
+Why Important: Prevents issues with displaying characters like é or ✓.
+html
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+Purpose: Ensures proper rendering on mobile devices.
+Attributes: 
+width=device-width: Sets the viewport width to the device's screen width, making the site responsive.
+initial-scale=1.0: Ensures the page is displayed at normal zoom levels by default.
+Title
+html
+<title>Page Title</title>
+Purpose: Specifies the title of the webpage, displayed in the browser tab or search engine results.
+
+4️⃣ <body> Section
+The <body> contains all the visible content of the webpage.
+Header Section
+html
+<header>
+    <h1>Website Header</h1>
+</header>
+<header>: Represents the top section of the webpage.
+<h1>: Contains the main heading of the page.
+Semantic Importance: <header> and <h1> help search engines and users understand the primary purpose of the page.
+Navigation Menu
+html
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+</nav>
+<nav>: Represents the navigation bar for links.
+<ul>: An unordered list that contains list items (<li>).
+<a>: Anchor tags within the list items for navigation links.
+Main Content
+html
+<main>
+    <section>
+        <h2>Section Title</h2>
+        <p>Paragraph inside section.</p>
+    </section>
+</main>
+<main>: Represents the core content of the page.
+<section>: Divides content into logical parts.
+<h2>: A subheading for the section.
+<p>: A paragraph describing the section's content.
+Footer
+html
+<footer>
+    <p>© 2024 All Rights Reserved</p>
+</footer>
+<footer>: Contains footer information, like copyright or legal text.
+<p>: Displays text within the footer.
+HTML Hierarchy
+Level	  Element	                        Description
+Root	  <html>	                        The root element of the document.
+Level 1	   <head>, <body>	                Metadata and visible content sections.
+Level 2	   <header>, <nav>, <main>, <footer>	Major content sections.
+Level 3	   <h1>, <ul>, <section>, <p>	        Subsections within the content.
+Level 4	   <li>, <a>	                        Inline and text-based elements.
+Why This Structure Is Effective
+Semantic Tags: Using <header>, <main>, and <footer> makes the structure clear for both humans and machines (like search engines).
+Responsive Design: The <meta viewport> tag ensures proper scaling on all devices.
+Organized Content: Logical grouping of navigation, main content, and footer improves readability and maintainability.
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 1. What is meant by an HTML body element?
 The HTML body element defines the main content of an HTML document that displays on the web page.
 It can contain text content, paragraphs, headings, images, tables, links, videos, etc.
@@ -848,64 +963,6 @@ html
 <p>This is a <span style="color: red;">red text</span> inside a paragraph.</p>
 <div>This is a block element.</div>
 In this example, <span> is an inline element (some of inline elemnets are <span>, <a>, <strong>, <em> ), and <div> is a block element ( <div>, <p>, <h1>, <section> are some examples of block elements	).
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-HTML Hierarchy : HTML documents have a hierarchical structure, starting with the <html> element, which contains the <head> and <body> elements, which in turn contain other elements.
-HTML follows a hierarchical structure where elements are arranged in a parent-child relationship. This hierarchy defines how elements are nested and organized within a webpage.
-HTML Document Structure (Hierarchy)
-html
-<!DOCTYPE html> <!-- Root: Defines HTML5 -->
-<html> <!-- Parent: Root element -->
-<head> <!-- Child of <html> -->
-    <title>Page Title</title> <!-- Child of <head> -->
-</head>
-<body> <!-- Child of <html> -->
-    <header> <!-- Child of <body> -->
-        <h1>Website Header</h1> <!-- Child of <header> -->
-    </header>
-    <nav> <!-- Child of <body> -->
-        <ul> <!-- Parent (contains list items) -->
-            <li><a href="#">Home</a></li> <!-- Child of <ul> -->
-            <li><a href="#">About</a></li>
-        </ul>
-    </nav>
-    <main> <!-- Main content -->
-        <section> <!-- Child of <main> -->
-            <h2>Section Title</h2> <!-- Child of <section> -->
-            <p>Paragraph inside section.</p>
-        </section>
-    </main>
-    <footer> <!-- Footer section -->
-        <p>© 2024 All Rights Reserved</p>
-    </footer>
-</body>
-</html>
-🔹 HTML Hierarchy Levels
-Level	HTML Elements	Description
-1 (Root)	<html>	The highest-level element (parent of all elements).
-2 (Metadata & Content)	<head>, <body>	Direct children of <html>.
-3 (Sections & Layouts)	<header>, <nav>, <main>, <section>, <footer>	Structure the webpage content.
-4 (Text & Lists)	<h1>-<h6>, <p>, <ul>, <li>	Define headings, paragraphs, and lists.
-5 (Inline Elements)	<a>, <span>, <strong>	Used inside text-based elements.
-🔹 Understanding Parent-Child Relationships
-Parent: An element that contains another element.
-Child: An element nested inside another element.
-Sibling: Elements on the same level.
-✅ Example:
-html
-<div> <!-- Parent -->
-    <p> This is a paragraph </p> <!-- Child -->
-    <p> Another paragraph </p> <!-- Sibling -->
-</div>
-🔹 Why HTML Hierarchy Matters?
-✔ Improves SEO (Search Engines understand structured content better).
-✔ Enhances Readability (Well-structured code is easier to manage).
-✔ Accessibility (A11Y) (Screen readers rely on hierarchy for navigation).
-✔ Affects CSS & JavaScript (Styles and scripts depend on element relationships).
-🚀 Summary
-HTML follows a parent-child hierarchy.
-<html> is the root, containing <head> and <body>.
-Elements like <header>, <nav>, <main> organize the layout.
-Proper hierarchy improves SEO, accessibility, and maintainability.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 HTML iFrames : An <iframe> (inline frame) is used to embed another HTML document within the current document. It allows you to display content from another source, such as a different website or a specific section of the same site.
 Example:
