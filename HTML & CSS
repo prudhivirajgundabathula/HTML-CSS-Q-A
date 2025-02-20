@@ -123,6 +123,7 @@ The <head> contains metadata that defines how the document behaves and appears.
 Meta Tags
 html
 <meta charset="UTF-8">
+Metadata is not visible to users but is important for browsers and search engines.
 Specifies Character Encoding: Ensures that the document uses the UTF-8 character set, which supports most characters, including special symbols and emojis.
 Why Important: Prevents issues with displaying characters like é or ✓.
 html
